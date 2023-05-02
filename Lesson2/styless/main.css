@@ -6,7 +6,7 @@ body{
 }
 
 header{
-    display: flex;
+    /*display: flex?*/
     align-items: center;
     background-color: #00ff0d;
     color: rgb(9, 1, 1);
