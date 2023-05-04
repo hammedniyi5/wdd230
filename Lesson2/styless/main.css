@@ -38,6 +38,9 @@ header div:nth-child(2){
 main h2{
     text-align: center;
 }
+main img {
+    max-width: 300px;
+}
 ul li{
     padding: .5rem;
     background-color: #59de59;
