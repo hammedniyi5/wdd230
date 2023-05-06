@@ -1,73 +1,63 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald&family=Roboto+Mono:ital@1&display=swap');
 
-
-body{
-    font-family:'Roboto', sans-serif;
+h1, h2, h3, h4, h5, h6, p, a {
+    font-family: "Oswald", sans-serif, "Roboto Mono", monospace, 'Times New Roman';
+    
 }
 
-header{
-    /*display: flex?*/
-    align-items: center;
-    background-color: #00ff0d;
-    color: rgb(9, 1, 1);
-    border: 2px rgb(0, 0, 0) solid;
-    border-radius: .4rem;
-}
-
-header img{
-    border: 1px solid #ffffff;
-    border-radius: 4px;
-    padding: 4px;
-    width: 130px;
-}
-
-header h1{
+header h1, header h2{
     text-align: center;
 }
 
-header div:nth-child(2){
-    width: 100%;
+section {
+    padding: 5%;
+    align-content: center;
+    text-align: center;
+    border-top: 0.2em black solid;
 }
 
-#content{
-    margin: 0 auto;
-    max-width: 640px;
-    background-color: #f4f0f0;
-}
-
-main h2{
+section h2, section h3 {
     text-align: center;
 }
-main img {
-    max-width: 300px;
-}
-ul li{
-    padding: .5rem;
-    background-color: #59de59;
+
+section a {
+    display: inline-block;
+    text-align: center;
 }
 
-ul li:nth-child(even){
-    padding: .5rem;
-    background-color: #57e944;
-}
-a:visited{
-    color: rgb(0, 0, 0);
+img {
+    max-width: 90%;
+    border-radius: 10px;
+    margin: 5%;
 }
 
-a{
-    color: rgb(0, 0, 0);
+footer {
+    border-top: 0.2em black solid;
+    text-align: center;
 }
 
-p{
+main {
+    display: grid;
+    grid-template-areas: "s1" "s2" "s3";
+}
+
+
+#section1{
+    grid-area: s1;            
+    background-color: lightblue;
+}
+#section2{
+    grid-area: s2;            
+    background-color: lightgreen;
+}
+
+#section3{
+    grid-area: s3;            
+    background-color: rgb(240, 232, 128);
+}
+
+section{
+    padding: 1rem;            
+    border: 2px solid black;
     margin: 1rem;
-}
-
-footer{
-    align-items: center;
-    background-color: #bbf1af;
-    color: black;
-    border: 2px black solid;
-    text-align: center;
-    padding: 1rem;
-    border-radius: .5rem;
 }
