@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'EB Garamond', serif;
+    max-width: 1060px;
+    margin: 0 auto;
+    padding:10px;
+}
+:root {
+    --main-color: #C0D6DF;
+    --accent-color: #474c38;
+    --text-color: white;
+    --brown-color: white;
+}
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px;
+    text-align: center;
+    background: hsl(183, 17%, 27%);
+    color: white;
+    font-size: 30px;
+  }
+
+#logo {
+    display: flex;
+    align-items: center;
+    color: var(--brown-color);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+footer img{
+    width:100px;
+    height: 100px;
+
+}
+#logo img {
+    width: 100px;
+    height:100px;
+   
+}
+
+#socialmedia {
+    font-size: 25px;
+}
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    text-align: center;
+    background: hsl(183, 17%, 27%);
+    color: black;
+    font-size: 30px;
+}
+
+.home {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(auto, auto);
+    gap: 20px;
+}
+.home div {
+    width: 100%;
+    height: 300px;
+    background-color: var(--main-color);
+    padding: 20px;
+    
+}
+#spotlight {
+    height: auto;
+}
+#spotlight div {
+    height: 200px;
+    width: 100%;
+    border: 1px solid black;
+}
+#spotlight1 img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.s3 {
+    display: none;
+}
+
+
+#join {
+    display: none;
+}
+#hero {
+    height: 400px;
+    padding: 0;
+}
+#hero img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.menu li{
+    list-style: none;
+    padding: 1rem;
+}
+.menu li a{
+    text-decoration: none;
+    color: white;
+    display: block;
+}
+#menu-closed{
+    display: block;
+    font-size: 2rem;
+    padding: 1rem;
+}
+#menu-open{
+    display: none;
+    font-size: 2rem;
+    padding: 1rem;
+}
+.menu{
+    display: none;
+}
+#menu-closed.active{
+    display: none;
+}
+#menu-open.active{
+    display: block;
+}
+.menu.active{
+    display: block;
+}
+#newsrelease{
+    width: auto;
+}
+#spotlight1 img {
+height: 100%;
+width: 100%;
+}
+#newsrelease{
+    width: auto;
+}
+#spotlight2 img {
+    height: 100%;
+    width: 100%;
+    }
+    #spotlight3 img {
+        height: 100%;
+        width: 100%;
+        }
