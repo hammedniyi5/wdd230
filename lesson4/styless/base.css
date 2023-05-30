@@ -11,8 +11,8 @@ body {
     padding:10px;
 }
 :root {
-    --main-color: #C0D6DF;
-    --accent-color: #474c38;
+    --main-color: #c1cbcf;
+    --accent-color: #3a4028;
     --text-color: white;
     --brown-color: white;
 }
@@ -22,7 +22,7 @@ footer {
     justify-content: space-between;
     padding: 40px;
     text-align: center;
-    background: hsl(183, 17%, 27%);
+    background: hsl(213, 10%, 46%);
     color: white;
     font-size: 30px;
   }
@@ -64,7 +64,7 @@ header{
     justify-content: space-between;
     padding: 20px;
     text-align: center;
-    background: hsl(183, 17%, 27%);
+    background: hsl(217, 29%, 25%);
     color: black;
     font-size: 30px;
 }
