@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <meta name="description" content="Seattle Chamber of Commerce site for WDD230">
+    <link rel="stylesheet" href="/chamber/styles/normalize.css">
+    <link rel="stylesheet" href="/chamber/styles/handf.css">
+    <link rel="stylesheet" href="./styles/base.css">
+    <link rel="stylesheet" href="../styles/large.css">
+    <link rel="stylesheet" href="./styles/medium.css">
+    <script src="./script/localstorage.js"></script>
+    <script src="/chamber/scripts/base.js" defer></script>
+    <title>Seattle Chamber of Commerce</title>
+</head>
+
+<body>
+    <div class="banner">
+        <div class="banner-content">
+            <div class="banner-text">
+                <!-- <p>Come join us for the chamber meet and greet Wednesday at 7:00 p.m.</p> -->
+            </div>
+            <!-- <button type="button" class="banner-button"><img src="images/close_FILL0_wght400_GRAD0_opsz48.png"
+                    alt="Close Button"></button> -->
+        </div>
+    </div>
+    <header>
+        <div id="logo"> 
+         <img src="/chamber/images/seattle.png" alt="">
+         <div>
+             <h2>Seattle</h2>
+             <h3>Chamber of Commerce</h3>
+         </div>
+        </div>
+        <div id="socialmedia">
+         <img src="./images/facebook2.png" alt="facebook">
+         <img src="./images/insta.png" alt="instagram">
+         <img src="images/lin.png" alt="linkedin">
+ 
+        </div>
+        <nav>
+         <button id="hamburger-menu">
+             <span  id="menu-closed">&equiv;</span>
+             <span  id="menu-open">X</span>
+             </button>
+         <ul class="menu">
+             <li><a href="discovery.html">Discover</a></li>
+             <li><a href="">Directory</a></li>
+             <li><a href="">Join</a></li>
+             <li><a href="">Contact</a></li>
+         </ul>
+         <!-- <p id="message"></p> -->
+     </nav>
+     </header>
+    <section class="date">
+        <h1>It has been <span id='days-since-visit'></span> days since your last visit.</h1>
+    </section>
+
+    <main>
+        <h1>Discover Seattle</h1>
+        <div class="discover">
+            <div id="disc1">
+                <picture>
+                    <img src="./images/spaceneedle1.jpg"
+                        data-src="images/discover/spaceneedle.jpg" alt="Space Needle">
+                </picture>
+                <h2>The Space Needle</h2>
+                <p>Come visit the Space Needle.</p>
+            </div>
+            <div id="disc2">
+                <picture>
+                    <img src="./images/rsz_seattlebeach.jpg"
+                        data-src="images/discover/stunningbeach.jpg" alt="Washington Beach">
+                </picture>
+                <h2>Stunning Beaches</h2>
+                <p>Come visit our beaches.</p>
+            </div>
+            <div id="disc3">
+                <picture>
+                    <img src="./images/university1.jpg"
+                        data-src="images/discover/edits/uw.jpg" alt="University of Washington">
+                </picture>
+                <h2>University of Washington</h2>
+                <p>Come visit the University of Washington.</p>
+            </div>
+            <div id="disc4">
+                <picture>
+                    <img src="./images/pikeplace.jpg"
+                        data-src="images/discover/pikeplacemarket.jpg" alt="Pike Place Market">
+                </picture>
+                <h2>Pike Place Market</h2>
+                <p>Come visit Pike Place Market.</p>
+            </div>
+            <div id="disc5">
+                <picture>
+                    <img src="./images/rsz_amazon.jpg"
+                        data-src="images/discover/amazonhq.jpeg" alt="Amazon Spheres">
+                </picture>
+                <h2>Amazon Headquarters</h2>
+                <p>Seattle is home to many large tech companies.</p>
+            </div>
+            <div id="disc6">
+                <picture>
+                    <img src="./images/rsz_bainbridge1.jpg"
+                        data-src="images/discover/bainbridge.jpg" alt="Bainbridge Ferry">
+                </picture>
+                <h2>Bainbridge Ferry</h2>
+                <p>Come visit Bainbrigde Island through our ferry system.</p>
+    </main>
+
+    <footer>
+        <div class="logoinfo">
+            <img src="./images/seattle.png" alt="logo">
+            <div>
+            <p>Seattle Commerce of Chamber</p>
+            <p>10 Pike Street</p>
+            <p>Seattle, WA 96101</p>
+            <h3>Visit Us</h3>
+            </div>
+            </div>
+            <div class="Contact">
+            <h3>Contact</h3>
+            <p>infor@seattle.com</p>
+            <p>(123) 646 5677</p>
+            </div>
+            <div class="container">
+    
+            <p>&copy; 2023 | WDD 230 | Morris Hinneh | WDD230 project | Last Modification:
+            <span id="Modification"></span>
+            </p>
+    
+            </div>
+              </footer>
+</body>
+
+</html>
