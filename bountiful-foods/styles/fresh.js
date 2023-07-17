@@ -25,7 +25,7 @@ var select = document.getElementById("fruits");
 var output = document.getElementById("output");
 
     select.addEventListener("change", () => {
-        var selectedOptions = select.;
+        var selectedOptions = select;
             selectedOptions.forEach(element => {
                 let fruit = document.createElement("h3");
                 fruit.innerHTML = String(element);
