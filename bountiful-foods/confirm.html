@@ -22,6 +22,12 @@
     <p>Below is the information you provided:</p>
     <div id="orderDataDisplay"></div>
 
+    <p>Total Calories: <span id="Calories"></span></p>
+    <p>Total Fat: <span id="Fat"></span></p>
+    <p>Total Sugar: <span id="Sugar"></span></p>
+    <p>Total Carbs: <span id="Carbs"></span></p>
+    <p>Total Protien: <span id="Protien"></span> </p>
+
     <footer>
         <a id="logo-container" href="index.html"><img src="images/logo.png" alt="Logo" id="logo"></a>
         <a href="mailto:bountiful@gmail.com">bountifulfoods@gmail.com</a>
@@ -66,6 +72,55 @@
 
         // Clear the form data from local storage
         localStorage.removeItem("orderData");
+
+let totalCalories = 0;
+let totalFat = 0;
+let totalSugar = 0;
+let totalCarbs = 0;
+let totalProtein = 0;
+
+function fetchFruitInformation(fruitName) {
+    return fetch(`https://www.fruityvice.com/api/fruit/${fruitName}`)
+        .then((response) => response.json())
+        .then((data) => {
+            // Add the nutrition values to the totals
+            totalCalories += data.nutritions.calories;
+            totalFat += data.nutritions.fat;
+            totalSugar += data.nutritions.sugar;
+            totalCarbs += data.nutritions.carbohydrates;
+            totalProtein += data.nutritions.protein;
+        })
+        .catch((error) => {
+            console.error("Error fetching data:", error);
+        });
+}
+       
+    
+        // Loop through the fruitList and fetch information for each fruit
+        async function fetchFruitsData() {
+    const fruits = orderData.fruits;
+
+    // Loop through the fruitList and fetch information for each fruit
+    for (const fruitName of fruits) {
+        await fetchFruitInformation(fruitName);
+    }
+
+    document.getElementById("Calories").textContent = totalCalories
+        document.getElementById("Fat").textContent = totalFat
+    document.getElementById("Sugar").textContent = totalSugar
+    document.getElementById("Carbs").textContent = totalCarbs
+    document.getElementById("Protien").textContent = totalProtein
+
+    // You can now access the total nutrition values here
+    // console.log("Total Calories:", totalCalories);
+    // console.log("Total Fat:", totalFat);
+    // console.log("Total Sugar:", totalSugar);
+    // console.log("Total Carbs:", totalCarbs);
+    // console.log("Total Protein:", totalProtein);
+}
+
+fetchFruitsData();
+
     </script>
 </body>
 </html>
