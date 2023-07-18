@@ -2,9 +2,16 @@ var lastModified = document.lastModified;
 let lastModifiedSpan = document.getElementById("lastModified");
 lastModifiedSpan.innerHTML = lastModified;
 
-
 var images = ['hero-img-1', 'hero-img-2', 'hero-img-3', 'hero-img-4'];
 var index = 0;
+
+function getCurrentValue() {
+    const currentValue = localStorage.getItem("count");
+    return currentValue ? parseInt(currentValue) : 0;
+}
+
+const currentValue = getCurrentValue();
+document.getElementById("count").textContent = currentValue;
 
 function cycleImages() {
     document.getElementById(images[index]).style.display = 'none';

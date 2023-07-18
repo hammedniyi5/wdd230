@@ -15,38 +15,13 @@
             <a href="fresh.html">Fresh</a>
             <a href="about.html">About Us</a>
             
-        </nav>
-        <!-- <div id="socials">
-            <a href="https://www.facebook.com/"><img src="images/facebook-logo.png" alt="Facebook"></a>
-            <a href="https://www.instagram.com/"><img src="images/instagram-logo.png" alt="Instagram"></a>
-            <a href="https://www.linkedin.com/"><img src="images/linkedin-logo.png" alt="LinkedIn"></a>
-        </div>
-        <a id="hamburger" href="#">&#8801;</a>
-        <a id="close" href="#">&#10005;</a> -->
+        </nav> 
     </header>
-    <main>
-        <section id="form">
-            <form id="orderForm">
-                <label for="fname">First Name*<input type="text" id="fname" name="fname" required></label>
-                <label for="email">Email*<input type="email" id="email" name="email" required></label>
-                <label for="phone">Phone*<input type="tel" id="phone" name="phone" required></label>
-                <label for="fruit">Select up to 3 types of fruit:</label>
-                <select name="fruits" id="fruits" multiple>
-    
-                </select>
-                <label for="instructions">Add Special Instructions<textarea type="text"  rows="5" cols="50" id="instructions" name="instructions"></textarea></label>
-                <p>**Payment is received when the drink is picked up**</p>
-                
-                <button type="submit">Order your smothie now</button>
+    <h1>Thank you for your order!</h1>
+    <p>Date: <span id="date"></span></p>
+    <p>Below is the information you provided:</p>
+    <div id="orderDataDisplay"></div>
 
-
-            </form>
-        </section>
-        <section id="output">
-
-        </section>
-        
-    </main>
     <footer>
         <a id="logo-container" href="index.html"><img src="images/logo.png" alt="Logo" id="logo"></a>
         <a href="mailto:bountiful@gmail.com">bountifulfoods@gmail.com</a>
@@ -66,6 +41,31 @@
         </div>
         
     </footer>
-    <script src="scripts/fresh.js"></script>
+    <script>
+        let currentDate = new Date().toJSON().slice(0, 10);
+        
+        document.getElementById("date").textContent = currentDate;
+        // Retrieve the form data from local storage and display it
+        const orderData = JSON.parse(localStorage.getItem("orderData"));
+        const orderDataDisplay = document.getElementById("orderDataDisplay");
+
+        const ul = document.createElement("ul");
+        for (const key in orderData) {
+            if (Array.isArray(orderData[key])) {
+                const li = document.createElement("li");
+                li.innerHTML = `<strong>${key}:</strong> ${orderData[key].join(", ")}`;
+                ul.appendChild(li);
+            } else {
+                const li = document.createElement("li");
+                li.innerHTML = `<strong>${key}:</strong> ${orderData[key]}`;
+                ul.appendChild(li);
+            }
+        }
+
+        orderDataDisplay.appendChild(ul);
+
+        // Clear the form data from local storage
+        localStorage.removeItem("orderData");
+    </script>
 </body>
 </html>

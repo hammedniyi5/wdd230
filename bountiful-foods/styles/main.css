@@ -152,6 +152,7 @@ main {
 }
 
 #weather {
+    height: 100%;
     grid-column: 1;
     display: flex;
     flex-direction: column;
@@ -227,7 +228,36 @@ main {
 }
 
 #about {
-    grid-column: 1/3
+    grid-column: 1/3;
     justify-content: center;
 
+}
+
+main #form form label{
+    display: flex;
+    flex-direction: column;
+}
+
+main #form form button{
+    height: 30px;
+    width: auto;
+    color: #fff;
+    background-color: blue;
+    font-size: larger;
+    /* margin-bottom: 30px; */
+}
+
+#hm-btn{
+    height: 30px;
+    width: auto;
+    color: #fff;
+    background-color: blue;
+    font-size: larger;
+}
+
+#information div{
+    display: flex;
+    
+    align-items: center;
+    flex-wrap: wrap;
 }
